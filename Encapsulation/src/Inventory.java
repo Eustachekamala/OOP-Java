@@ -20,6 +20,12 @@ public class Inventory {
         items.add(new Weapon(name, quantity, type, damage));
     }
 
+    public void displayInfo(){
+        for (Item item : items){
+            item.displayInfo();
+        }
+    }
+
     public void displayInventory(String type){
         for (Item item : items){
             if(item instanceof Fruit && ((Fruit) item).getType().equalsIgnoreCase(type)){
